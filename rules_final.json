@@ -1,0 +1,114 @@
+[
+  {
+    "rule": "IF main_genre_Horror > 0.500 AND popularity > 73.279 AND vote_count > 878.000 THEN class = 1",
+    "predicted_class": 1,
+    "support": 23,
+    "confidence": 1.0,
+    "conflict_note": "Wysoka popularność horrorów z dużą liczbą głosów wskazuje na sukces, ale reguły 7 i 19 pokazują, że brak zaangażowania (niska liczba głosów) może prowadzić do porażki mimo wysokiej popularności."
+  },
+  {
+    "rule": "IF main_genre_Horror > 0.500 AND popularity <= 12.900 AND language_en > 0.500 THEN class = 0",
+    "predicted_class": 0,
+    "support": 615,
+    "confidence": 0.914,
+    "conflict_note": "Niska popularność, angielski język horrorów często prowadzi do niepowodzenia, a podział na podprzedziały popularności (<= 12.900 vs > 12.900) rozbija tę grupę na kilka reguł."
+  },
+  {
+    "rule": "IF main_genre_Horror <= 0.500 AND popularity <= 13.291 AND main_genre_Documentary > 0.500 AND vote_count > 80.500 AND budget <= 40851.500 THEN class = 1",
+    "predicted_class": 1,
+    "support": 217,
+    "confidence": 0.954,
+    "conflict_note": "Sukces dokumentów z niską popularnością jest przewidywany zarówno przy niskim, jak i wysokim budżecie."
+  },
+  {
+    "rule": "IF main_genre_Horror <= 0.500 AND popularity > 13.291 AND main_genre_Animation <= 0.500 AND main_genre_Drama <= 0.500 AND vote_count > 9048.500 THEN class = 1",
+    "predicted_class": 1,
+    "support": 130,
+    "confidence": 0.954,
+    "conflict_note": null
+  },
+  {
+    "rule": "IF main_genre_Horror <= 0.500 AND popularity > 17.012 AND main_genre_Animation > 0.500 AND budget <= 35500000.000 THEN class = 1",
+    "predicted_class": 1,
+    "support": 329,
+    "confidence": 0.899,
+    "conflict_note": "Warunek `popularity > 17.012` jest bardziej restrykcyjny niż `popularity > 13.291` (które jest częścią oryginalnej reguły 4). Ta reguła skupia się na udanych animacjach przy wysokim budżecie i umiarkowanej popularności."
+  },
+  {
+    "rule": "IF main_genre_Horror <= 0.500 AND popularity <= 13.291 AND main_genre_Documentary > 0.500 AND vote_count <= 80.500 THEN class = 1",
+    "predicted_class": 1,
+    "support": 65,
+    "confidence": 0.86,
+    "conflict_note": "Sukces dokumentów z niską popularnością i niską liczbą głosów jest przewidywany niezależnie od roku wydania (stary/nowy), ale w analizie były rozdzielone reguły 6 i 18 (po oczyszczeniu pozostała reguła 6)."
+  },
+  {
+    "rule": "IF main_genre_Horror > 0.500 AND popularity > 24.176 AND vote_count <= 878.000 AND budget > 2500.000 THEN class = 0",
+    "predicted_class": 0,
+    "support": 23,
+    "confidence": 0.913,
+    "conflict_note": "Wysoka popularność horroru z niską liczbą głosów prowadzi do porażki, nawet przy wysokim budżecie."
+  },
+  {
+    "rule": "IF main_genre_Horror > 0.500 AND popularity <= 24.176 AND language_en > 0.500 AND revenue > 731653.000 THEN class = 0",
+    "predicted_class": 0,
+    "support": 88,
+    "confidence": 0.909,
+    "conflict_note": "Niska popularność horroru z angielskim językiem i wysokimi przychodami prowadzi do porażki."
+  },
+  {
+    "rule": "IF main_genre_Horror <= 0.500 AND popularity > 13.291 AND main_genre_Animation > 0.500 AND budget > 35500000.000 AND popularity > 32.837 THEN class = 1",
+    "predicted_class": 1,
+    "support": 57,
+    "confidence": 0.895,
+    "conflict_note": "Sukces animacji z bardzo wysokim budżetem i bardzo wysoką popularnością."
+  },
+  {
+    "rule": "IF main_genre_Horror <= 0.500 AND popularity > 13.291 AND main_genre_Animation <= 0.500 AND main_genre_Drama > 0.500 AND vote_count > 709.000 THEN class = 1",
+    "predicted_class": 1,
+    "support": 359,
+    "confidence": 0.877,
+    "conflict_note": "Filmy niebędące horrorami, z umiarkowaną/wysoką popularnością, niebędące animacją, będące dramatem z dużą liczbą głosów, prowadzą do sukcesu."
+  },
+  {
+    "rule": "IF main_genre_Horror <= 0.500 AND popularity <= 13.291 AND main_genre_Documentary <= 0.500 AND language_en > 0.500 AND main_genre_Music > 0.500 THEN class = 1",
+    "predicted_class": 1,
+    "support": 64,
+    "confidence": 0.875,
+    "conflict_note": "Niszowe gatunki (nie horror, nie dokument) z niską popularnością i angielskim językiem mogą być udane."
+  },
+  {
+    "rule": "IF main_genre_Horror > 0.500 AND popularity <= 24.176 AND language_en <= 0.500 AND popularity <= 7.953 THEN class = 0",
+    "predicted_class": 0,
+    "support": 37,
+    "confidence": 0.865,
+    "conflict_note": "Wąska grupa horrorów nieanglojęzycznych o bardzo niskiej popularności jest niepowodzeniem."
+  },
+  {
+    "rule": "IF main_genre_Horror <= 0.500 AND popularity <= 13.291 AND main_genre_Documentary > 0.500 AND vote_count > 80.500 AND budget > 40851.500 THEN class = 1",
+    "predicted_class": 1,
+    "support": 20,
+    "confidence": 0.85,
+    "conflict_note": "Sukces dokumentów z niską popularnością, umiarkowaną liczbą głosów i wysokim budżetem."
+  },
+  {
+    "rule": "IF main_genre_Horror > 0.500 AND popularity > 48.583 AND popularity <= 73.279 AND vote_count > 878.000 THEN class = 1",
+    "predicted_class": 1,
+    "support": 20,
+    "confidence": 0.8,
+    "conflict_note": "Sukces horrorów z popularnością w przedziale (48.583, 73.279] i dużą liczbą głosów."
+  },
+  {
+    "rule": "IF main_genre_Horror > 0.500 AND popularity <= 24.176 AND language_en > 0.500 AND revenue <= 731653.000 THEN class = 0",
+    "predicted_class": 0,
+    "support": 116,
+    "confidence": 0.784,
+    "conflict_note": "Niska popularność horroru z angielskim językiem i niskimi przychodami prowadzi do porażki."
+  },
+  {
+    "rule": "IF main_genre_Horror > 0.500 AND popularity > 24.176 AND vote_count <= 878.000 AND budget <= 2500.000 AND revenue <= 16407.000 THEN class = 0",
+    "predicted_class": 0,
+    "support": 33,
+    "confidence": 0.758,
+    "conflict_note": "Wysoka popularność horroru z niską liczbą głosów i bardzo niskim budżetem/przychodami prowadzi do porażki."
+  }
+]
